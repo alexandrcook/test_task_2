@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Services\GPSCalculations\GPSCalculationsService;
+use App\Services\GPSCalculation\GPSCalculationService;
 use Illuminate\Database\Eloquent\Model;
 
 class Affiliate extends Model
@@ -16,7 +16,7 @@ class Affiliate extends Model
 
     public function checkDistanceToDublinOffice()
     {
-        return GPSCalculationsService::vincentyGreatCircleDistance(
+        return GPSCalculationService::vincentyGreatCircleDistance(
             $this->latitude,
             $this->longitude,
             self::DUBLIN_GPS_COORDINATES['latitude'],

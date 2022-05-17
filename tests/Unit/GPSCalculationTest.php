@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use App\Models\Affiliate;
-use App\Services\GPSCalculations\GPSCalculationsService;
+use App\Services\GPSCalculation\GPSCalculationService;
 use Tests\TestCase;
 
 class GPSCalculationTest extends TestCase
@@ -13,7 +13,7 @@ class GPSCalculationTest extends TestCase
      */
     public function test_GPS_calculation_return_right_results_for_test_affiliates_less_or_equal_100km_distance($latitude,$affiliate_id,$name,$longitude)
     {
-        $distance = GPSCalculationsService::vincentyGreatCircleDistance(
+        $distance = GPSCalculationService::vincentyGreatCircleDistance(
             $latitude,
             $longitude,
             Affiliate::DUBLIN_GPS_COORDINATES['latitude'],
@@ -28,7 +28,7 @@ class GPSCalculationTest extends TestCase
      */
     public function test_GPS_calculation_return_right_results_for_test_affiliates_more_than_100km_distance($latitude,$affiliate_id,$name,$longitude)
     {
-        $distance = GPSCalculationsService::vincentyGreatCircleDistance(
+        $distance = GPSCalculationService::vincentyGreatCircleDistance(
             $latitude,
             $longitude,
             Affiliate::DUBLIN_GPS_COORDINATES['latitude'],

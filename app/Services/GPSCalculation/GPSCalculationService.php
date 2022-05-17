@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\GPSCalculations;
+namespace App\Services\GPSCalculation;
 
-class GPSCalculationsService
+class GPSCalculationService
 {
     const EARTH_RADIUS = 6371; //in [km]
 

@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use App\Models\Affiliate;
-use App\Services\GPSCalculations\GPSCalculationsService;
+use App\Services\GPSCalculation\GPSCalculationService;
 use Tests\TestCase;
 
 class AffiliateListTest extends TestCase
